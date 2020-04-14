@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            cursor: pointer;
+        }
+
+        div {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <img onclick="myFunction('Joe')" src="joe.png">
+    <img onclick="myFunction('Baskin')" src="baskin.png">
+    <img onclick="myFunction('Jeff')" src="jeff.png">
+    <br>
+  
+<div id="corona">You have chosen:&nbsp;</div>  
+<div id="kusma"></div>
+<br>
+<p id="astma"></p>
+<p id="pest"></p>
+
+<script>
+var astma = document.getElementById('astma');
+var kusma = document.getElementById('kusma');
+
+function myFunction(name) {
+  var x = Math.floor((Math.random() * 3) + 1);
+  var y = name;
+
+  kusma.innerText = y;
+        
+        if (x == 1) {
+            astma.innerText = 'Computer have chosen Joe';
+        }
+        if (x == 2) {
+            astma.innerText = 'Computer have chosen Baskin';
+        }
+        if (x == 3) {
+            astma.innerText = 'Computer have chosen Jeff';
+        }
+   }
+  
+
+  
+    
+
+    var compare = function(choice1, choice2) {
+    if(choice1 === choice2) {
+    return "The result is a tie!";
+}
+if (choice1 === "paper") {
+    if (choice2 === "rock") {
+        return "paper wins";
+    } else {
+        if (choice2 === "scissors") {
+            return "scissors wins";
+        }
+    }
+    if (choice1 === "scissors") {
+        if (choice2 === "rock") {
+            return "rock wins";
+        } else {
+            if (choice2 === "paper") {
+                return "scissors wins";
+            }
+        }
+    }
+}
+}
+  
+
+</script>
+</body>
+</html>
